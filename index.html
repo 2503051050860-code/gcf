@@ -2,73 +2,160 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+    <title>My Personal Website</title>
     <style>
         *{
-            margin:0;
-            padding:0;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
         body{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: 100vh;
+            background: url('https://img.pikbest.com/backgrounds/20241215/abstract-blue-background-with-some-smooth-lines-in-it--28see-more-my-portfolio-29_11256315.jpg!bw700') no-repeat center / cover;
+           padding: 50px 5%;
+        }
+        .container{
+            position: relative;
+            height: 100%;
+            background: rgb(5, 106, 131);
+            border-radius: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(30px);
+            transform: scale(0);
+            animation: zoomin ;
         }
         header{
-            background-color: blue;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 5%;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
         }
-        nav{
-            background: yellowgreen;
-            padding: 14px;
-            text-align: center;
+        .logo{
+            font-size: 25px;
+            color: #0c0f0c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .navbar a{
+            font-size: 18px;
+            color: red;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            border-bottom: 2px solid transparent;
 
         }
-        nav a{
+        .navbar a:hover,
+        .navbar a:active{
+            border-color: #00ff00;
+            color: bisque;
+        }
+        .home{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 50px;
+            padding: 50px 5% 0;
+            color: mediumspringgreen;
+        }
+        .home-details h1{
+            margin: 10px;
+        }
+        .home-details h2{
+            font-size: 33px;
+        }
+        .home-details p{
+            margin: 10px 0 20px;
+        }
+        .home-details .download-social{
+            display: flex;
+            align-items: center;
+        }
+        .btn{
+            display: inline-block;
+            padding: 10px 20px;
+            background: yellow;
+            border: 2px solid red;
+            box-shadow: 0 0 10px blue;
+            border-radius: 40px;
+        }
+        .btn:hover{
+            background: transparent;
+            box-shadow: none;
+            color: white;
+        }
+        .home-details .social-icons{
+            margin-left: 20px;
+        }
+        .home-details .social-icons a{
+            display: inline-block;
+            padding: 8px;
+            border: 2px solid blueviolet;
+            border-radius:  50%;
+            font-size: 20px;
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            display: flex;
-             }
-        nav p{
-            text-align: left;
+            margin: 0 8px;
         }
-       
+        .home-details .social-icons a:hover{
+            background: #fff;
+            box-shadow: 0 0 10px #fff;
+
+        }
+        .animated{
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slide-in 1s ease forwards;
+            animation-delay: 1s;
+        }
+        @keyframes slide-in{
+            100%{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
- <header>
- <body>
-    <nav>
-        <p><img src="https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/02/pepsiman-logo-header-feature.jpg" alt="logo" height="25px" width="25px">Pepsi log</p>
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
-    </nav>
- </header>
- <main>
-    <h1>PEPSIMAN</h1>
-    <p>Pepsiman is an endless runner action video game developed and published by KID for the Playstation</p>
- </main> 
- <section>
-    <h1>Background and Development</h1>
-    <p>Pepsiman is based on Pepsi's mascot of the same name, which was created for Pepsi's Japanese branch.[5] The character, whose fictional backstory says he used to be a scientist who transformed into a superhero after coming into contact with "Holy Pepsi",[8] was featured in Japanese Pepsi commercials[5] and in the Japanese version of the video game Fighting Vipers; he became popular in Japan,[9] spawning related characters such as Lemon Pepsiman and Pepsiwoman,[8] and Pepsi decided to promote the character with a video game.[5]</p>
- </section>
- <article>
-    <h2>References</h2>
-    <p>Hardcore Gaming 101. 12 July 2017</p>
- </article>
- <aside>
-    <h3>Related games</h3>
-    <ul>
-        <li><a href="">Pepsiman reloaded</a></li>
-        <li><a href="">Pepsiman 2</a></li>
-    </ul>
- </aside>
- <footer>
+    <div class="container">
+        <header class="animated">
+            <a href="#" class="logo">Portfolio</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
 
- </footer>
+            </nav>
+        </header>
+        <section class="home">
+            <div class="home-details">
+                <h1>Miss_Bev_</h1>
+                <h2>Frontend Developer</h2>
+                <p>I am a Frontend Developer.My tech stack is HTML, CSS,Bootstrap, JavaScript,react and php</p>
+            </div>
+            <div class="download-social">
+                <a href="#" class="btn">Download CV</a>
+                <div class="social-icons">
+                    <a href=""><img src="https://image.similarpng.com/file/similarpng/very-thumbnail/2020/04/Popular-Logo-facebook-icon-png.png" alt="" height="12px" width="12px"></a>
+                    <a href=""><img src="https://toppng.com/uploads/preview/twitter-x-icon-logo-116902890413xbfexhf8l.webp" alt="" height="12px" width="12px"></a>
+                </div>
+            </div>
+            <div class="home-image">
+              <div class="imb-box">
+                <img src="" alt="" >
+              </div>  
+            </div>
+        </section>
+    </div>
 </body>
 </html>
