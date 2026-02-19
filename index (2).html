@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 100px;
+            width: 100px;
+            background: yellow;
+            top: 30px;
+            left: 50;
+            position: relative;
+            z-index: 1;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: absolute;
+            top: 30px;
+            left: 70px;
+            z-index: 5;
+        }
+        .box3{
+            height: auto;
+            width: auto;
+            background: lightsalmon;
+            z-index: 10;
+        }
+        .ar{
+            aspect-ratio: 16/9;
+            width: 50%;
+            background: green;
+            z-index: 15;
+        }
+    </style>
+</head>
+<body>
+    <h2>Relative Positioning</h2>
+   <div class="box1">
+       200px+100px
+   </div>
+   <h2>Min and Max width</h2>
+   <div class="box2">
+       Resizer
+   </div> 
+   <h2>Auto height and width</h2>
+   <div class="box3">
+       auto
+   </div>
+   <h2>Aspect ratio</h2>
+   <div class="ar">
+    aspect ratio
+   </div>
+</body>
+</html>
